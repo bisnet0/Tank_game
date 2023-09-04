@@ -22,6 +22,22 @@ x+=5;
 image_angle = -90
 
 }
+
+if keyboard_check(ord("W")) &&  keyboard_check(ord("A")){
+    image_angle = 45;
+}
+
+if keyboard_check(ord("W")) &&  keyboard_check(ord("D")){
+    image_angle = -45;
+}
+
+if keyboard_check(ord("S")) &&  keyboard_check(ord("A")){
+    image_angle = 135;
+}
+
+if keyboard_check(ord("S")) &&  keyboard_check(ord("D")){
+    image_angle = -135;
+}
 #endregion
 
 #region DIRECAO DO TIRO
