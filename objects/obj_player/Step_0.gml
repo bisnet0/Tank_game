@@ -56,12 +56,16 @@ if _mov_south && _mov_east{
 
 #region DIRECAO DO TIRO
 
-if(keyboard_check_pressed(vk_space)){
-	var _tiro= instance_create_layer(x, y, "Instances", obj_shot);
+var _space = keyboard_check_pressed(vk_space)
+
+if(_space && global._cooldown < 1){
+	var _tiro= instance_create_layer(x, y, "ShotLayer", obj_shot);
 	_tiro.image_angle = image_angle
 	_tiro.direction = direction
-	show_debug_message(_tiro.direction)
+	global._cooldown = 3;
 }
+
+global._cooldown = global._cooldown - 1;
 
 
 #endregion
