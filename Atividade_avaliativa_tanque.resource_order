@@ -19,8 +19,11 @@
   "ResourceOrderSettings": [
     {"name":"obj_enemy","order":1,"path":"objects/obj_enemy/obj_enemy.yy",},
     {"name":"spr_enemy","order":1,"path":"sprites/spr_enemy/spr_enemy.yy",},
+    {"name":"spr_wall","order":4,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"obj_shot","order":2,"path":"objects/obj_shot/obj_shot.yy",},
-    {"name":"spr_background","order":16,"path":"sprites/spr_background/spr_background.yy",},
+    {"name":"spr_background","order":3,"path":"sprites/spr_background/spr_background.yy",},
+    {"name":"obj_wall","order":3,"path":"objects/obj_wall/obj_wall.yy",},
+    {"name":"Object5","order":4,"path":"objects/Object5/Object5.yy",},
     {"name":"spr_shot","order":2,"path":"sprites/spr_shot/spr_shot.yy",},
   ],
 }

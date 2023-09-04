@@ -1,4 +1,1 @@
-var tiro=-1;
-
-
-
+direction = 90;
