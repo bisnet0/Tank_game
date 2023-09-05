@@ -58,14 +58,14 @@ if _mov_south && _mov_east{
 
 var _space = keyboard_check_pressed(vk_space)
 
-if(_space && global._cooldown < 1){
+if(_space && _cooldown_player < 1){
 	var _tiro= instance_create_layer(x, y, "ShotLayer", obj_shot);
 	_tiro.image_angle = image_angle
 	_tiro.direction = direction
-	global._cooldown = 3;
+	_cooldown_player = 3;
 }
 
-global._cooldown = global._cooldown - 1;
+_cooldown_player = _cooldown_player - 1;
 
 
 #endregion

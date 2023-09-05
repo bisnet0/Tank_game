@@ -1,8 +1,5 @@
-/// @description Inserir descrição aqui
-// Você pode escrever seu código neste editor
+hp = 1;
+circle =0
+spd = 3.5;
 
-
-
-
-
-
+_cooldown = 0;
