@@ -69,3 +69,32 @@ _cooldown_player = _cooldown_player - 1;
 
 
 #endregion
+
+#region MOVIMENTACAO PELA CÂMERA
+var canto_x_min = 68
+var canto_x_max = 1281
+						//CANTOS DO JOGO
+var canto_y_min = 68
+var canto_y_max = 700
+
+var intervalo_de_spawn = 10*room_speed
+
+var camera_x = camera_get_view_x(view_camera[0])
+var camera_y = camera_get_view_y(view_camera[0])
+
+spawn_timer +=1
+
+if (camera_x>canto_x_min || camera_x < canto_x_max || camera_y > canto_y_min ||camera_y < canto_y_max){
+	
+
+	if(spawn_timer>=intervalo_de_spawn){
+		instance_create_layer(x,y,"Instances",obj_controller)
+		spawn_timer =0
+	}
+	
+
+
+}
+
+
+#endregion
