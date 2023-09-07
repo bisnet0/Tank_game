@@ -1,6 +1,6 @@
 direction = 90;
 
 hp = 2;
-spawn_timer = 0
+tempo_de_spawn = 0
 
 _cooldown_player = 0;

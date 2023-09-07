@@ -71,30 +71,50 @@ _cooldown_player = _cooldown_player - 1;
 #endregion
 
 #region MOVIMENTACAO PELA CÂMERA
-var canto_x_min = 68
-var canto_x_max = 1281
-						//CANTOS DO JOGO
-var canto_y_min = 68
-var canto_y_max = 700
 
-var intervalo_de_spawn = 10*room_speed
+var player_collision_radius = 800; 
 
-var camera_x = camera_get_view_x(view_camera[0])
-var camera_y = camera_get_view_y(view_camera[0])
+var spawn_areas = [
+    { x_min: 100, x_max: 100, y_min: 100, y_max: 100 },
+    { x_min: 1266, x_max: 1266, y_min: 100, y_max: 100 },
+    { x_min: 100, x_max: 100, y_min: 668, y_max: 668 },
+    { x_min: 1266, x_max: 1266, y_min: 668, y_max: 668 }
+];
 
-spawn_timer +=1
+var intervalo_de_spawn = 2 * room_speed;
 
-if (camera_x>canto_x_min || camera_x < canto_x_max || camera_y > canto_y_min ||camera_y < canto_y_max){
-	
+var player_x = x; 
+var player_y = y; 
 
-	if(spawn_timer>=intervalo_de_spawn){
-		instance_create_layer(x,y,"Instances",obj_controller)
-		spawn_timer =0
-	}
-	
+tempo_de_spawn += 1;
 
-
+if (tempo_de_spawn >= intervalo_de_spawn) {
+    var spawn_area = spawn_areas[irandom(3)];
+    var spawn_x, spawn_y;
+    
+    var max_attempts = 100;
+    var attempt = 0;
+    
+    do {
+        spawn_x = irandom_range(spawn_area.x_min, spawn_area.x_max);
+        spawn_y = irandom_range(spawn_area.y_min, spawn_area.y_max);
+        
+        attempt += 1;
+        
+        if (attempt >= max_attempts) {
+            break;
+        }
+    } until (!collision_circle(spawn_x, spawn_y, player_collision_radius, obj_player, false, true));
+    
+    if (attempt < max_attempts) {
+        instance_create_layer(spawn_x, spawn_y, "Instances", obj_controller);
+        tempo_de_spawn = 0;
+    }
 }
+
+
+
+
 
 
 #endregion
