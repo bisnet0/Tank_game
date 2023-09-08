@@ -75,13 +75,13 @@ _cooldown_player = _cooldown_player - 1;
 var player_collision_radius = 800; 
 
 var spawn_areas = [
-    { x_min: 100, x_max: 100, y_min: 100, y_max: 100 },
-    { x_min: 1266, x_max: 1266, y_min: 100, y_max: 100 },
-    { x_min: 100, x_max: 100, y_min: 668, y_max: 668 },
-    { x_min: 1266, x_max: 1266, y_min: 668, y_max: 668 }
+    { x_min: 45, x_max: 250, y_min: 51, y_max: 96 },
+    { x_min: 60, x_max: 210, y_min: 644, y_max: 739 },
+    { x_min: 1181, x_max: 1307, y_min: 39, y_max: 152 },
+    { x_min: 1117, x_max: 1332, y_min: 635, y_max: 736 }
 ];
 
-var intervalo_de_spawn = 2 * room_speed;
+var intervalo_de_spawn = 10 * room_speed;
 
 var player_x = x; 
 var player_y = y; 
