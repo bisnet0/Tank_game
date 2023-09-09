@@ -1,5 +1,7 @@
 direction = 90;
-hp = 5;
+global.hp = 6;
+global.pontos =0
+global.recorde = 0
 tempo_de_spawn = 0
 _cooldown_player = 0;
 passou_pela_parede = false;

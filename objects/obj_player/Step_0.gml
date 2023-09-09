@@ -113,7 +113,13 @@ if (tempo_de_spawn >= intervalo_de_spawn) {
     }
 }
 
+#region RECORDE
+if(global.pontos>global.recorde){
+	global.recorde= global.pontos
 
+}
+
+#endregion
 
 
 

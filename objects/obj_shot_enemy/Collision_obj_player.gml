@@ -1,7 +1,7 @@
 
 with (other)
 {
-    hp = hp - 1;
+    global.hp = global.hp - 1;
 }
 	instance_destroy();
 

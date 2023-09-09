@@ -1,12 +1,12 @@
-
-if(hp < 5){
+#region EFEITO PISCAR VERMELHO
+if(global.hp < 6){
 	image_blend = c_red //piscar vermelho para perda de hp
 	alarm[0] = 30
 
 }
-
-
-if (hp = 0){
+#endregion
+#region EFEITO GAME OVER
+if (global.hp = 0){
 
 	instance_destroy();
 
@@ -16,5 +16,5 @@ if (hp = 0){
 	instance_create_layer(x,y,"new_game",obj_game_over)
 
 }
-
+#endregion
 
