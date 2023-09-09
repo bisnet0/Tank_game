@@ -6,6 +6,7 @@ if(_cooldown < 1){
 	_tiro.image_angle = image_angle
 	_tiro.direction = direction
 	_cooldown = 30;
+
 }
 
 _cooldown = _cooldown - 1;

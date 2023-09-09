@@ -1,9 +1,11 @@
 direction = 90;
-
-hp = 2;
+hp = 5;
 tempo_de_spawn = 0
-
 _cooldown_player = 0;
 passou_pela_parede = false;
 parede_solida = false
-
+tempo_restante =3*room_speed
+contador_ativo = false
+var delay_seconds = 3; // O atraso em segundos
+var sound_to_play = snd_game_over; // O som a ser reproduzido
+alarm[1] = delay_seconds * room_speed;

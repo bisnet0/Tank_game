@@ -1,5 +1,5 @@
-instance_create_layer(x,y,"Instances",obj_explosion)
-show_message("Game Over")
+//instance_create_layer(x,y,"Instances",obj_explosion)
+//show_message("Game Over")
 
-game_restart();
+//game_restart();
 

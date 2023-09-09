@@ -1,4 +1,4 @@
-#region PROCURAR PLAYER E ATIRAR
+
 
 #region MOVIMENTACAO DO INIMIGO
 
@@ -24,7 +24,7 @@ move_towards_point(x_destino,y_destino,spd)
 }
 #endregion
 
-
+#region COLISÃO DO JOGADOR COM TIRO
 if (collision_circle(x, y,150, obj_player, false, false)) {
 image_angle = direction;
 	direction = point_direction(x, y, obj_player.x, obj_player.y);
@@ -35,11 +35,12 @@ image_angle = direction;
 		_tiro.image_angle = image_angle
 		_tiro.direction = direction
 		_cooldown = 30;
+		audio_play_sound(snd_shoot,3,false)
 	}
 }
 
+#endregion
 
-#endregion 
 
 #region TIRO
 _cooldown = _cooldown - 1;

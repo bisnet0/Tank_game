@@ -63,6 +63,7 @@ if(_space && _cooldown_player < 1){
 	_tiro.image_angle = image_angle
 	_tiro.direction = direction
 	_cooldown_player = 3;
+	audio_play_sound(snd_shoot,1,false)
 }
 
 _cooldown_player = _cooldown_player - 1;
@@ -81,7 +82,7 @@ var spawn_areas = [
     { x_min: 1117, x_max: 1332, y_min: 635, y_max: 736 }
 ];
 
-var intervalo_de_spawn = 10 * room_speed;
+var intervalo_de_spawn = 2 * room_speed;
 
 var player_x = x; 
 var player_y = y; 
